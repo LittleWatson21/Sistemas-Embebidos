@@ -10,12 +10,11 @@ void main(void){
 setup_oscillator(OSC_16MHZ); //se establece el clock otra vez.
 set_tris_b(0x00);//Con este  comando establecemos  los puertos b en modo salida.
 int contador = 128; //La variable.
-while(1){
-    output_b(contador); //La salida que tendrá el PIC.
-    contador /= 2;
-    if (contador == 0)
-    contador = 128;
-    delay_ms(500);
+    while(1){
+        output_b(contador); //La salida que tendrá el PIC.
+        contador /= 2;
+        if (contador == 0)
+            contador = 128;
+        delay_ms(500);
    }
-
 } 
